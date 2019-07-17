@@ -1,3 +1,5 @@
+import java.sql.SQLOutput;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -5,6 +7,7 @@ public class Main {
         System.out.println(toMilesPerHour(110));
         printMegaByteAndKiloBytes(3000);
         System.out.println(shouldWakeUp(true,22));
+        System.out.println(isLeapYear(2000));
     }
 
 
@@ -44,6 +47,33 @@ public class Main {
             return false;
         }
 
+    }
+
+    //Exercise 4
+    public static boolean isLeapYear(int year){
+        if(year>=1 && year<=9999){
+            if(year%4==0){
+                if(year%100==0){
+                    if(year%400==0){
+                        return true;
+                    }
+                    else{
+                        return false;
+                    }
+                }
+                else{
+                    return true;
+                }
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        else{
+            return false;
+        }
     }
 
 
