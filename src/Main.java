@@ -26,6 +26,24 @@ public class Main {
         System.out.printf(kilobytes+ " KB = " + megabytes + "MB + "+ kilobytes2 + "KB");
     }
 
+    //Exercise 3
+    public static boolean shouldWakeUp(boolean barking, int hourOfDay)
+    {
+        if (hourOfDay>0 && hourOfDay<23) {
+
+            if (barking == true && hourOfDay < 8 || hourOfDay > 22) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+
 
 
 
